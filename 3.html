@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+		<meta name="viewport" content="width-device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="#"/>
+		<title>Learn ReactJS!</title>
+	</head>
+	<body>
+		
+		<div id="root"></div>
+
+		<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+		<script>
+			// Write nested element
+			const root = document.querySelector('#root');
+
+			/*
+			const li = React.createElement('li', {
+					children: 'Apple 1',
+				}
+			);
+			const li1 = React.createElement('li', {
+					children: 'Apple 2',
+				}
+			);
+			const li2 = React.createElement('li', {
+					children: 'Apple 3',
+				}
+			);
+			*/
+
+			// First parameter for tag element, props, content
+			// const element = React.createElement('ul', null, li, li1, li2);
+			const element = React.createElement(
+				'ul',
+				{ className: 'list', },
+				React.createElement('li', null, 'Apple 1'),
+				React.createElement('li1', null, 'Orange'),
+				React.createElement('li3', null, 'Grape'),
+			);
+			ReactDOM.render(element, root);
+		</script>
+	</body>
